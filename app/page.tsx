@@ -36,7 +36,7 @@ export default function Home() {
       </div>
       <div>
 
-      <div className="flex flex-col items-center text-white my-5  gap-5 container m-auto">
+      <div className="flex flex-col items-center text-white my-8  gap-5 container m-auto">
         <h1 className="text-center  text-3xl font-bold">I Created This Project With Help Of YouTube Tutorial by <Link className="text-white bg-gradient-to-br cursor-pointer from-purple-600 to-blue-500 hover:bg-gradient-to-bl dark:focus:ring-blue-800 font-medium rounded-base text-2xl px-4 py-2.5 text-center leading-5" href="https://www.youtube.com/@CodeWithHarry">Code With Harry</Link></h1>
         <iframe className="my-10 rounded-2xl" width="560" height="315" src="https://www.youtube.com/embed/QtaorVNAwbI?si=hdz-eb7YXqMy1GJo" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
       </div>
