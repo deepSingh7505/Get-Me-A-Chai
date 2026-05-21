@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-neutral-primary-soft: #e5e7eb;
+  --color-neutral-secondary-medium: #d1d5db;
+  --color-neutral-tertiary-soft: #f3f4f6;
+  --radius-base: 6px;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+}
