@@ -1,17 +1,24 @@
 "use client"
 import Github from "next-auth/providers/github"
 import { useSession, signIn, signOut } from "next-auth/react"
-import  { Router, useRouter ,useEffect } from "next/navigation"
+import  { Router, useRouter  } from "next/navigation"
+import { useEffect } from "react"
 
 import React from 'react'
 
 const Login = () => {
+
       const { data: session } = useSession()
         const router = useRouter()
-    if (session){
-      router.push('/')
+
+        useEffect(() => {
+           if (session){
+      router.push('/Dashboard')
     }
  
+        },[session])
+        
+   
 
   return (
     <>

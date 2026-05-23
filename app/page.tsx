@@ -21,13 +21,13 @@ export default function Home() {
         <h1 className="text-3xl">Buy a chai for me and fund me</h1>
         <div className="flex justify-between px-5 gap-5 w-full">
           <div className="flex flex-col items-center item space-y-3"><img className=" p-2 bg-slate-500 rounded-full" src="/man.gif" alt="" width={80} />
-            <p>Focus On your Project</p>
+            <p className="w-[155px] text-center">Focus On your Project</p>
           </div>
           <div className=" flex flex-col items-center item space-y-3"><img className=" p-2 bg-slate-500 rounded-full" src="/coin.gif" alt="" width={80} />
-            <p>Get Fund For Your Project</p>
+            <p className="w-[155px] text-center">Get Fund For Your Project</p>
           </div>
           <div className="flex flex-col items-center item space-y-3"><img className=" p-2 bg-slate-500 rounded-full" src="/group.gif" alt="" width={80} />
-            <p>Get Support from Your Loved Once</p>
+            <p className="w-[155px] text-center">Get Support From Fans</p>
           </div>
         </div>
 
@@ -36,9 +36,10 @@ export default function Home() {
       </div>
       <div>
 
-      <div className="flex flex-col items-center text-white my-8  gap-5 container m-auto">
-        <h1 className="text-center  text-3xl font-bold">I Created This Project With Help Of YouTube Tutorial by <Link className="text-white bg-gradient-to-br cursor-pointer from-purple-600 to-blue-500 hover:bg-gradient-to-bl dark:focus:ring-blue-800 font-medium rounded-base text-2xl px-4 py-2.5 text-center leading-5" href="https://www.youtube.com/@CodeWithHarry">Code With Harry</Link></h1>
-        <iframe className="my-10 rounded-2xl" width="560" height="315" src="https://www.youtube.com/embed/QtaorVNAwbI?si=hdz-eb7YXqMy1GJo" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+      <div className="flex flex-col justify-center items-center text-white my-8  gap-5 container  m-auto ">
+        <h1 className="text-center  text-2xl font-bold">This project was built with guidance from a YouTube tutorial by</h1> <Link className="text-white  bg-gradient-to-br cursor-pointer from-purple-600 to-blue-500 hover:bg-gradient-to-bl dark:focus:ring-blue-800 font-medium rounded-base text-2xl px-4 py-2.5 text-center leading-5" href="https://www.youtube.com/@CodeWithHarry">Code With Harry</Link>
+        <iframe className="my-10 rounded-2xl w- md:w-[560px] md:h-[315px] "  src="https://www.youtube.com/embed/QtaorVNAwbI?si=hdz-eb7YXqMy1GJo" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+
       </div>
       </div>
 
