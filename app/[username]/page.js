@@ -35,9 +35,32 @@ const Username = ({ params }) => {
         </div>
   
         <div>25,556 members &bull; 110 posts &bull; $17,550/release</div>
-        <div className='flex flex-col'>
-          <button className='bg-[#5B51B0] p-3 my-3 rounded-xl'>Join for free</button>
-          <button className='bg-[#3D3C41] p-3 rounded-xl'>See membership options</button>
+        <div className='paymet flex w-[80%] gap-4'>
+          <div className='supporters  w-1/2 bg-slate-700 p-4 rounded-xl max-h-[212px] overflow-auto'>
+            <h1 className='font-bold text-2xl'>Supporters - </h1>
+            <ul className='mt-3 '>
+              <li>DeepSingh donated 1000$ and say "good luck"</li>
+              <li>DeepSingh donated 1000$ and say "good luck"</li>
+              <li>DeepSingh donated 1000$ and say "good luck"</li>
+           <li>DeepSingh donated 1000$ and say "good luck"</li>
+            </ul>
+          </div>
+          <div className='make payment  w-1/2 bg-slate-700 p-4 rounded-xl  flex flex-col items-center max-h-[212px]'>
+          <h1 className='font-bold text-2xl'>Make Payment </h1>
+        <div className='flex  items-center justify-around w-full'>
+        <input className='bg-white text-black w-[75%]  p-3 my-3 rounded-xl ' type="number" name="" id="" />
+          <button className='bg-[#00091D] w-[15%] p-3 rounded-xl cursor-pointer'>Pay</button>
+        </div>
+       <div className='mb-[5px]'>or</div>
+        <div className="options flex justify-around gap-2">
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+100</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+200</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+300</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+400</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+500</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+1000</button>
+        </div>
+          </div>
         </div>
 
         </div>
