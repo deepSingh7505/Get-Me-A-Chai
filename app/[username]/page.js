@@ -36,29 +36,33 @@ const Username = ({ params }) => {
   
         <div>25,556 members &bull; 110 posts &bull; $17,550/release</div>
         <div className='paymet flex w-[80%] gap-4'>
-          <div className='supporters  w-1/2 bg-slate-700 p-4 rounded-xl max-h-[212px] overflow-auto'>
+          <div className='supporters  w-1/2 bg-slate-700 p-4 rounded-xl  overflow-auto max-h-[342px]'>
             <h1 className='font-bold text-2xl'>Supporters - </h1>
-            <ul className='mt-3 '>
-              <li>DeepSingh donated 1000$ and say "good luck"</li>
-              <li>DeepSingh donated 1000$ and say "good luck"</li>
-              <li>DeepSingh donated 1000$ and say "good luck"</li>
-           <li>DeepSingh donated 1000$ and say "good luck"</li>
+            <ul className=' flex flex-col gap-2 mt-3 '>
+              <li className='border border-slate-500 py-2 rounded-xl px-2'>DeepSingh donated 1000$ and say "good luck"</li>
+              <li className='border border-slate-500 py-2 rounded-xl px-2'>DeepSingh donated 1000$ and say "good luck"</li>
+              <li className='border border-slate-500 py-2 rounded-xl px-2'>DeepSingh donated 1000$ and say "good luck"</li>
+              <li className='border border-slate-500 py-2 rounded-xl px-2'>DeepSingh donated 1000$ and say "good luck"</li>
+              <li className='border border-slate-500 py-2 rounded-xl px-2'>DeepSingh donated 1000$ and say "good luck"</li>
+              <li className='border border-slate-500 py-2 rounded-xl px-2'>DeepSingh donated 1000$ and say "good luck"</li>
             </ul>
           </div>
-          <div className='make payment  w-1/2 bg-slate-700 p-4 rounded-xl  flex flex-col items-center max-h-[212px]'>
-          <h1 className='font-bold text-2xl'>Make Payment </h1>
-        <div className='flex  items-center justify-around w-full'>
-        <input className='bg-white text-black w-[75%]  p-3 my-3 rounded-xl ' type="number" name="" id="" />
-          <button className='bg-[#00091D] w-[15%] p-3 rounded-xl cursor-pointer'>Pay</button>
+          <div className='make payment  w-1/2 bg-slate-700 p-4 rounded-xl  flex flex-col items-center '>
+          <h1 className='font-bold text-2xl'>Your Message And Payment </h1>
+        <div className='flex flex-col  items-center justify-around w-full'>
+        <input className='bg-white text-black w-full  py-1 px-3 focus:outline-none my-2 rounded-xl ' placeholder='Enter Your Full Name' type="text" name="username" id="" />
+        <input className='bg-white text-black w-full  py-1 px-3 focus:outline-none my-2 rounded-xl ' placeholder='Enter Your Message' type="text" name="message" id="" />
+        <input className='bg-white text-black w-full  py-1 px-3 focus:outline-none my-2 rounded-xl ' placeholder='Enter Amount' type="number" name="amount" id="" />
+          <button className='text-white bg-gradient-to-br cursor-pointer from-purple-600 to-blue-500 hover:bg-gradient-to-bl dark:focus:ring-blue-800 font-medium rounded-base text-sm px-4 py-2.5 my-3 text-center leading-5 w-full'>Pay</button>
         </div>
        <div className='mb-[5px]'>or</div>
-        <div className="options flex justify-around gap-2">
-          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+100</button>
-          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+200</button>
-          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+300</button>
-          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+400</button>
-          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+500</button>
-          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+1000</button>
+        <div className="options w-full px-1 flex justify-center gap-4 ">
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+ 10₹</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+ 20₹</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+ 30₹</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+ 40₹</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+ 50₹</button>
+          <button className='bg-[#3D3C41] p-3 rounded-xl cursor-pointer'>+ 100₹</button>
         </div>
           </div>
         </div>
