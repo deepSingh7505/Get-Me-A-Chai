@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const Userschema = new mongoose.Schema({
-    name:{type:String , required : true},
-    email:{type:String ,},
+    name:{type:String , },
+    email:{type:String ,required : true},
     username:{type:String , required : true },
     porfilepicture:{type:String , },
     coverpicture:{type:String ,  },

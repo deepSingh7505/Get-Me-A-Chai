@@ -1,8 +1,5 @@
 import NextAuth from 'next-auth'
-import AppleProvider from 'next-auth/providers/apple'
-import FacebookProvider from 'next-auth/providers/facebook'
 import GoogleProvider from 'next-auth/providers/google'
-import EmailProvider from 'next-auth/providers/email'
 import GithubProvider from 'next-auth/providers/github'
 import mongoose from 'mongoose'
 import User from '@/models/User'
@@ -17,10 +14,6 @@ export const authoptions = NextAuth({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET
     }),
-    FacebookProvider({
-      clientId: process.env.FACEBOOK_ID,
-      clientSecret: process.env.FACEBOOK_SECRET
-    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET
@@ -28,27 +21,36 @@ export const authoptions = NextAuth({
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-     if(account.provider == "github")
+     if(account.provider == "github" || account.provider == "google")
      {
+       console.log("database connecting");
        const client = await mongoose.connect(process.env.MGDB);
-       const currentuser = await User.findOne({email :email})
+       console.log("database connected");
+       
+       const currentuser = await User.findOne({email :user.email})
        if(!currentuser){
+        console.log("user not found");
+        
         const newuser = new User({
-          email : email ,
-          username : email.split("@")[0],
+          email : user.email ,
+          username : user.email.split("@")[0],
          })
          await newuser.save()
+       }
+       else{
+        console.log("user already exist");
        }      
       }
       return true
+     },
+     async session({session , user , token}){
+      await mongoose.connect(process.env.MGDB)
+       const dbuser = await User.findOne({email : session.user.email})
+       console.log(session);
+       session.user.name = dbuser.username
+       console.log(`i am session ${session}`);
+       return session
      }
-    },
-    async session({session , user , token}){
-      const dbuser = await user.findOne({email : session.user.email})
-      session.user.name = dbuser.username
-      console.log(`i am session ${session}`);
-      
-      return session
     }
 })
 

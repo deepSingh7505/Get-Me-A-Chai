@@ -44,7 +44,7 @@ const Navbar = () => {
                       <Link href="/Dashboard" className="hover:bg-slate-400 inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Dashboard</Link>
                     </li>
                     <li>
-                      <Link href="/Settings" className="hover:bg-slate-400 inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Settings</Link>
+                      <Link href={`/${session.user.name}`} className="hover:bg-slate-400 inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Your Page</Link>
                     </li>
                     <li>
                       <Link onClick={()=>logout()} href="#" className="hover:bg-slate-400 inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign Out</Link>

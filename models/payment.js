@@ -6,8 +6,6 @@ const paymentschema = new mongoose.Schema({
     oid:{type:String , required : true},
     message:{type:String , required : true},
     amount:{type:Number , required : true},
-    createdAt:{type:Date , required : true},
-    udpatedAt:{type:Date , required : true},
-    done:{type:Boolean , Default : false},
+    done:{type:Boolean , default : false},
 })
 export default mongoose.models.payment || mongoose.model("payment" , paymentschema) ; 
